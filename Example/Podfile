@@ -1,0 +1,20 @@
+source 'https://github.com/CocoaPods/Specs.git'
+source 'http://bj.gitlab.cnlive.com/ios-team/CNLiveRepos.git'
+use_frameworks!
+
+platform :ios, '9.0'
+
+target 'CNLiveCommonClass_Example' do
+  pod 'CNLiveCommonClass', :path => '../'
+  pod 'CNLiveTripartiteManagement/QMUIKit'
+  pod 'CNLiveRequestBastKit'
+  pod 'CNLiveBaseKit'
+
+  target 'CNLiveCommonClass_Tests' do
+    inherit! :search_paths
+    pod 'CNLiveTripartiteManagement/QMUIKit'
+    pod 'CNLiveRequestBastKit'
+    pod 'CNLiveBaseKit'
+    
+  end
+end
